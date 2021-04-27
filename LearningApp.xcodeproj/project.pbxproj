@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E20D08526372C2B0010555D /* ContentViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E20D08426372C2B0010555D /* ContentViewRow.swift */; };
+		3E20D08826374D540010555D /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E20D08726374D540010555D /* ContentDetailView.swift */; };
+		3E20D08C26377A2A0010555D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E20D08B26377A2A0010555D /* AVKit.framework */; };
+		3E20D08E263788820010555D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E20D08D263788820010555D /* Constants.swift */; };
 		3EC0B5A426347352009D8D0C /* LearningAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B5A326347352009D8D0C /* LearningAppApp.swift */; };
 		3EC0B5A626347352009D8D0C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC0B5A526347352009D8D0C /* HomeView.swift */; };
 		3EC0B5A826347352009D8D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EC0B5A726347352009D8D0C /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		3E20D08426372C2B0010555D /* ContentViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewRow.swift; sourceTree = "<group>"; };
+		3E20D08726374D540010555D /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		3E20D08B26377A2A0010555D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3E20D08D263788820010555D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3EC0B5A026347352009D8D0C /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC0B5A326347352009D8D0C /* LearningAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAppApp.swift; sourceTree = "<group>"; };
 		3EC0B5A526347352009D8D0C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -41,17 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E20D08C26377A2A0010555D /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E20D08A26377A2A0010555D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E20D08B26377A2A0010555D /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3EC0B59726347352009D8D0C = {
 			isa = PBXGroup;
 			children = (
 				3EC0B5A226347352009D8D0C /* LearningApp */,
 				3EC0B5A126347352009D8D0C /* Products */,
+				3E20D08A26377A2A0010555D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +110,7 @@
 				3EC0B5C62636F700009D8D0C /* HomeViewRow.swift */,
 				3EC0B5C926371929009D8D0C /* ContentView.swift */,
 				3E20D08426372C2B0010555D /* ContentViewRow.swift */,
+				3E20D08726374D540010555D /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 			children = (
 				3EC0B5C026348F9A009D8D0C /* style.html */,
 				3EC0B5BD26348F94009D8D0C /* data.json */,
+				3E20D08D263788820010555D /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -204,10 +222,12 @@
 				3EC0B5A626347352009D8D0C /* HomeView.swift in Sources */,
 				3EC0B5C72636F700009D8D0C /* HomeViewRow.swift in Sources */,
 				3EC0B5CA26371929009D8D0C /* ContentView.swift in Sources */,
+				3E20D08826374D540010555D /* ContentDetailView.swift in Sources */,
 				3EC0B5A426347352009D8D0C /* LearningAppApp.swift in Sources */,
 				3E20D08526372C2B0010555D /* ContentViewRow.swift in Sources */,
 				3EC0B5BB2634748E009D8D0C /* ContentModel.swift in Sources */,
 				3EC0B5C42634917D009D8D0C /* Models.swift in Sources */,
+				3E20D08E263788820010555D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

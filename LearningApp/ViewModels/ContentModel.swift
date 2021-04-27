@@ -12,9 +12,16 @@ class ContentModel : ObservableObject {
   // List of modules
   @Published var modules = [Module] ()
   
+  // List of lessons
+//  @Published var lessons = [Lesson] ()
+  
   // Current module
   @Published var currentModule: Module?
   var currentModuleIndex = 0
+  
+  // Current Lesson
+  @Published var currentLesson: Lesson?
+  var currentLessonIndex=0
   
   var styleData : Data?
   
@@ -34,6 +41,42 @@ class ContentModel : ObservableObject {
     }
     currentModule = modules[currentModuleIndex]
   }
+  
+  func beginLesson(_ lessonid:Int) {
+    // Find the index for this module id
+    print ("lessonid is " + String(lessonid))
+    if lessonid < currentModule!.content.lessons.count {
+      currentLessonIndex = lessonid
+    }
+    else {
+      currentLessonIndex = 0
+    }
+    
+    print (String(currentLessonIndex))
+    currentLesson = currentModule!.content.lessons[currentLessonIndex]
+  }
+  
+  func hasNextLesson() -> Bool {
+    
+    return currentLessonIndex + 1 < currentModule!.content.lessons.count
+    
+  }
+  
+  func nextLesson() {
+    
+    currentLessonIndex += 1
+    
+    if currentLessonIndex < currentModule!.content.lessons.count {
+      currentLesson = currentModule?.content.lessons[currentLessonIndex]
+    }
+    else {
+      currentLessonIndex = 0
+      currentLesson = nil
+    }
+    
+  }
+
+  
   
   
   // MARK: - Data Methods

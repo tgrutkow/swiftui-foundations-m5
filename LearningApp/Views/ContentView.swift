@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @EnvironmentObject var model: ContentModel
+//  @EnvironmentObject var lessons: [Lesson]
 
   var body: some View {
     ScrollView{
@@ -18,14 +19,22 @@ struct ContentView: View {
         
           ForEach(0..<model.currentModule!.content.lessons.count) { index in
              //Lesson Card
-            ContentViewRow(index:index)
-           
+            NavigationLink(
+              destination:
+                ContentDetailView()
+                .onAppear(perform: {
+                  model.beginLesson(index)
+                }),
+              label: {
+                ContentViewRow(index:index)
+              })
+            
           }
         }
       }
       .padding()
       .navigationTitle("Learn \(model.currentModule?.category ?? "")")
-      .accentColor(.red)
+      .accentColor(.black)
     }
   }
 }
